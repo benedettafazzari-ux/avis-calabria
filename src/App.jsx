@@ -266,19 +266,15 @@ export default function App() {
 
       <section className="bg-white text-[#005bbb] py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
-         <h2 className="text-xl md:text-4xl font-black uppercase leading-tight">
-            Una donazione può salvare
-            <br />
-            <span className="whitespace-nowrap">Una donazione può salvare</span>
-            <br />
-            <span className="text-4xl md:text-6xl">fino a 3 vite</span>
+         <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">
+            Una donazione può salvare fino a 3 vite
           </h2>
           
-          <p className="mt-6 text-2xl md:text-3xl text-[#005bbb]/80 font-black">
+          <p className="mt-10 mb-4 text-xl md:text-3xl text-[#005bbb]/80 font-black">
             Il sangue è fondamentale per:
           </p>
 
-          <div className="grid md:grid-cols-4 gap-6 mt-20">
+           <div className="grid md:grid-cols-4 gap-6 mt-6">
             {donationUses.map((item) => (
               <div
                 key={item}
@@ -293,7 +289,7 @@ export default function App() {
 
       <section id="donazione" className="py-28 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight whitespace-nowrap">
+          <h2 className="text-2xl md:text-5xl font-black uppercase leading-tight whitespace-nowrap">
             La donazione di sangue
           </h2>
           
@@ -358,7 +354,7 @@ export default function App() {
 
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="text-center lg:text-left">
-              <p className="text-2xl md:text-3xl font-black uppercase leading-tight">
+              <p className="text-xl md:text-3xl font-black uppercase leading-tight">
                 Scegli la tua provincia e trova subito il riferimento AVIS più vicino a te.
               </p>
             </div>
