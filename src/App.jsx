@@ -181,14 +181,13 @@ export default function App() {
 
       <section
         id="avis"
-        className="relative z-10 py-28 px-6 max-w-7xl mx-auto grid gap-10 md:grid-cols-2"
-      >
+        className="relative z-10 py-16 md:py-28 px-4 max-w-7xl mx-auto grid gap-6 md:gap-10 md:grid-cols-2"      >
         {sections.map((section) => (
           <article
             key={section.title}
-            className="group bg-white text-[#005bbb] rounded-[2rem] p-10 shadow-xl hover:-translate-y-2 transition-all duration-300"
+            className="group bg-white text-[#005bbb] rounded-[2rem] p-7 md:p-10 shadow-xl hover:-translate-y-2 transition-all duration-300 text-center"
           >
-            <div className="flex items-baseline gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-5">
               <span className="text-xl leading-none group-hover:scale-110 transition-transform duration-300 inline-block">
                 {section.emoji}
               </span>
