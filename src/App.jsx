@@ -15,7 +15,7 @@ export default function App() {
         "Puoi donare se hai tra 18 e 60 anni, pesi più di 50 kg e hai uno stile di vita sano.",
       items: [
         "Età compresa tra 18 e 60 anni",
-        "Peso superiore a 50 kg",
+        "Peso corporeo superiore a 50 kg",
         "Buono stato di salute",
         "Stile di vita sano",
       ],
@@ -37,9 +37,18 @@ export default function App() {
   ];
 
   const stats = [
-    { value: "10/15 min", label: "Durata della donazione" },
-    { value: "450 ml", label: "Volume del prelievo" },
-    { value: "90 giorni", label: "Tra due donazioni di sangue" },
+    {
+      value: "10/15 min",
+      label: "Durata della donazione",
+    },
+    {
+      value: "450 ml",
+      label: "Volume del prelievo",
+    },
+    {
+      value: "90 giorni",
+      label: "Tra due donazioni di sangue",
+    },
   ];
 
   const foodTips = [
@@ -54,9 +63,18 @@ export default function App() {
   ];
 
   const faq = [
-    { q: "Fa male?", a: "Il fastidio è minimo e dura pochi secondi." },
-    { q: "Quanto dura una donazione?", a: "Circa 10-15 minuti." },
-    { q: "È sicuro?", a: "Sì, tutto il materiale utilizzato è sterile e monouso." },
+    {
+      q: "Fa male?",
+      a: "Il fastidio è minimo e dura pochi secondi.",
+    },
+    {
+      q: "Quanto dura una donazione?",
+      a: "Circa 10-15 minuti.",
+    },
+    {
+      q: "È sicuro?",
+      a: "Sì, tutto il materiale utilizzato è sterile e monouso.",
+    },
     {
       q: "Se ho un tatuaggio posso donare?",
       a: "Sì, ma di solito bisogna attendere 4 mesi dal tatuaggio o dal piercing, per sicurezza.",
@@ -113,6 +131,14 @@ export default function App() {
 
   const socialLinks = ["Instagram", "TikTok", "Facebook"];
 
+  console.assert(sections.length === 3, "Expected 3 info sections");
+  console.assert(donationUses.length === 4, "Expected 4 donation use cards");
+  console.assert(stats.length === 3, "Expected 3 donation stat cards");
+  console.assert(foodTips.length === 2, "Expected 2 food tip cards");
+  console.assert(faq.length >= 5, "Expected at least 5 FAQ items");
+  console.assert(provinces.length === 5, "Expected 5 Calabria provinces");
+  console.assert(socialLinks.length === 3, "Expected 3 social links");
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#005bbb] text-white font-sans selection:bg-white selection:text-[#005bbb]">
       <nav className="fixed top-0 left-0 w-full z-50 bg-[#005bbb] border-b border-white/15">
@@ -142,45 +168,42 @@ export default function App() {
         </div>
       </nav>
 
-      <section className="relative bg-[#005bbb] text-white px-5 pt-8 pb-0 text-center overflow-hidden">
-        <div className="mx-auto mb-12 flex items-center justify-center">
-          <div className="relative text-6xl font-black italic tracking-[-0.12em] leading-none">
-            <span className="text-white">A</span>
-            <span className="relative text-white">
-              V
-              <span className="absolute left-1/2 top-3 -translate-x-1/2 text-2xl not-italic text-red-500">
-                ●
-              </span>
-            </span>
-            <span className="text-white">IS</span>
-          </div>
+      <section className="relative bg-[#005bbb] text-white px-6 pt-8 pb-0 text-center overflow-hidden">
+        <div className="mx-auto mb-14 text-5xl font-black tracking-tight">
+          <span className="text-white">AV</span>
+          <span className="text-red-500">I</span>
+          <span className="text-white">S</span>
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto pb-20">
-          <h1 className="text-[clamp(1.65rem,6.8vw,5rem)] font-black uppercase leading-tight tracking-tight whitespace-nowrap">
+          <h1 className="text-[clamp(2rem,8vw,5rem)] font-black uppercase leading-tight tracking-tight">
             Il sangue <span className="text-red-500">salva vite.</span>
           </h1>
 
-          <h2 className="mt-7 text-[clamp(1.35rem,5.5vw,3.5rem)] font-black uppercase leading-snug max-w-[360px] mx-auto">
+          <h2 className="mt-7 text-[clamp(1.45rem,6vw,3.5rem)] font-black uppercase leading-snug max-w-[360px] mx-auto">
             La tua scelta può fare la differenza.
           </h2>
         </div>
 
-        <div className="relative z-20 mx-[-1.25rem] bg-white rounded-t-[3rem] px-6 pt-8 pb-10">
+        <div className="relative z-20 mx-[-1.5rem] bg-white rounded-t-[3rem] px-6 pt-10 pb-12">
           <a
             href="https://www.aviscalabria.it/"
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-auto flex w-full max-w-[270px] items-center justify-center rounded-full border-[5px] border-[#005bbb] bg-white px-7 py-4 text-xl font-black leading-tight text-[#005bbb] shadow-2xl"
+            className="mx-auto flex w-full max-w-[340px] items-center justify-center rounded-full border-[6px] border-[#005bbb] bg-white px-8 py-6 text-3xl font-black leading-tight text-[#005bbb] shadow-2xl"
           >
-            Diventa Donatore
+            <span>
+              Diventa
+              <br />
+              Donatore
+            </span>
           </a>
         </div>
       </section>
 
       <section
         id="avis"
-        className="relative z-10 py-14 md:py-28 px-4 max-w-7xl mx-auto grid gap-6 md:gap-10 md:grid-cols-2"
+        className="relative z-10 py-16 md:py-28 px-4 max-w-7xl mx-auto grid gap-6 md:gap-10 md:grid-cols-2"
       >
         {sections.map((section) => (
           <article
@@ -236,7 +259,7 @@ export default function App() {
                 {section.items.map((item) => (
                   <span
                     key={item}
-                    className="flex min-h-12 w-full items-center justify-center rounded-full bg-[#005bbb] px-3 py-3 text-center text-[13px] md:text-base font-black leading-snug text-white shadow-md"
+                    className="flex h-14 w-full items-center justify-center rounded-full bg-[#005bbb] text-center text-base font-black text-white shadow-md"
                   >
                     {item}
                   </span>
