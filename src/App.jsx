@@ -176,7 +176,7 @@ export default function App() {
           </h2>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-white rounded-t-[100%]" />
+       <div className="absolute bottom-0 left-0 w-full h-8 bg-white" />
 
         <a
           href="https://www.aviscalabria.it/"
@@ -448,7 +448,10 @@ export default function App() {
           </p>
 
           <a
-            href="#avis"
+            <a
+              href="https://www.avis.it/"
+              target="_blank"
+              rel="noopener noreferrer"
             className="inline-block mt-14 bg-white text-[#005bbb] hover:scale-110 transition-all duration-300 px-12 py-6 rounded-full text-xl font-black shadow-xl"
           >
             Unisciti ad AVIS
