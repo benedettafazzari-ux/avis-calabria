@@ -165,7 +165,12 @@ export default function App() {
         </div>
       </nav>
 
-<section className="relative min-h-[48vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-2 pb-6">
+<section className="relative min-h-[58vh] md:min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-0">
+    <div className="absolute top-8 left-1/2 -translate-x-1/2 text-4xl font-black tracking-tight">
+      <span className="text-white">AV</span>
+      <span className="text-red-500">I</span>
+      <span className="text-white">S</span>
+    </div>
       <div className="relative z-10 w-full max-w-7xl mx-auto">
           <h1 className="text-[clamp(2rem,7vw,6rem)] font-black uppercase leading-tight tracking-tight">
             Il sangue <span className="text-red-500">salva vite.</span>
@@ -176,13 +181,13 @@ export default function App() {
           </h2>
         </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-28 bg-white rounded-t-[3rem]" />
+      <div className="absolute bottom-0 left-0 w-full h-36 bg-white rounded-t-[4rem]" />
 
         <a
           href="https://www.aviscalabria.it/"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute left-1/2 bottom-0 z-20 -translate-x-1/2 translate-y-1/2 inline-flex items-center justify-center bg-white text-[#005bbb] hover:bg-[#005bbb] hover:text-white border-4 border-[#005bbb] transition-all duration-300 px-9 py-4 rounded-full text-lg font-black shadow-2xl"
+         className="absolute left-1/2 bottom-12 z-20 -translate-x-1/2 translate-y-1/2 inline-flex w-[320px] max-w-[82vw] items-center justify-center bg-white text-[#005bbb] border-[5px] border-[#005bbb] transition-all duration-300 px-10 py-5 rounded-full text-2xl font-black leading-tight shadow-2xl"
         >
           Diventa Donatore
         </a>
@@ -194,7 +199,7 @@ export default function App() {
         {sections.map((section) => (
           <article
             key={section.title}
-            className="group bg-white text-[#005bbb] rounded-[1.5rem] p-5 md:p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 text-left"
+           className="group bg-white text-[#005bbb] rounded-[2rem] p-6 md:p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 text-left"
           >
             <div className="flex items-start justify-start gap-3 mb-4">
               <span className="text-xl leading-none mt-1 group-hover:scale-110 transition-transform duration-300 inline-block">
@@ -219,7 +224,7 @@ export default function App() {
 
             {section.title !== "Chi può donare?" &&
             section.title !== "Come ottenere l'idoneità" ? (
-              <p className="text-lg leading-relaxed text-[#005bbb]/90 text-justify">
+              <p className="text-lg leading-snug text-[#005bbb]/90">
                 {section.content}
               </p>
             ) : null}
@@ -248,8 +253,8 @@ export default function App() {
                 {section.items.map((item) => (
                   <span
                     key={item}
-                    className="bg-[#005bbb] text-white px-5 py-3 rounded-full font-bold shadow-md"
-                  >
+                    className="flex h-14 w-[150px] items-center justify-center rounded-full bg-[#005bbb] text-center text-base font-black text-white shadow-md"
+                    >
                     {item}
                   </span>
                 ))}
