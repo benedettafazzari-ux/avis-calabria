@@ -348,8 +348,8 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="absolute -translate-x-1/2 -translate-y-1/2 bg-white text-[#005bbb] border-4 border-[#005bbb] rounded-full w-20 h-20 flex flex-col items-center justify-center font-black shadow-xl hover:scale-110 transition-all duration-300 cursor-pointer"
                   style={{ top: province.top, left: province.left }}
-                  aria-label={Apri AVIS Provinciale ${province.name}}
-                  title={AVIS Provinciale ${province.name}}
+                  aria-label={`Apri AVIS Provinciale ${province.name}`}
+                  title={`AVIS Provinciale ${province.name}`}
                 >
                   <span className="text-xl leading-none">{province.sigla}</span>
                   <span className="text-[10px] mt-1 font-bold uppercase">
