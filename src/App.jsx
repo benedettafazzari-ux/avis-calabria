@@ -216,11 +216,6 @@ export default function App() {
                 )}
               </h3>
             </div>
-            {section.title === "Come ottenere l'idoneità" ? (
-                <p className="mt-2 text-sm md:text-base font-bold uppercase tracking-wide text-[#005bbb]/80">
-                  Ecco i requisiti base!
-                </p>
-              ) : null}
 
             {section.title !== "Chi può donare?" &&
             section.title !== "Come ottenere l'idoneità" ? (
