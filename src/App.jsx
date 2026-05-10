@@ -7,7 +7,7 @@ export default function App() {
       content:
         "AVIS è la più grande organizzazione italiana di volontariato del sangue e contribuisce a garantire circa il 70% del fabbisogno nazionale.",
       items: ["Solidarietà", "Gratuità", "Anonimato", "Periodicità"],
-      emoji: "❤️",
+      emoji: "🩸",
     },
     {
       title: "Chi può donare?",
@@ -124,9 +124,9 @@ export default function App() {
   ];
 
   const idoneitaSteps = [
-    "Contatta la sede AVIS più vicina",
-    "Compila il questionario e fai i controlli",
-    "Ricevi l’esito e la conferma del medico",
+    "Contatta la sede AVIS più vicina.",
+    "Compila il questionario e fai i controlli.",
+    "Ricevi l’esito e la conferma del medico.",
   ];
   const socialLinks = ["Instagram", "TikTok", "Facebook"];
 
