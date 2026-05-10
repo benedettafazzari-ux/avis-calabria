@@ -405,7 +405,7 @@ export default function App() {
         className="relative py-36 px-6 text-center overflow-hidden"
       >
         <div className="relative max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight">
+         <h2 className="text-2xl md:text-5xl font-black uppercase leading-tight">
             Dona il tuo tempo.
             <br />
             <span className="whitespace-nowrap">Diventa volontario AVIS.</span>
