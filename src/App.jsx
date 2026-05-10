@@ -19,7 +19,12 @@ export default function App() {
       title: "Chi può donare?",
       content:
         "Puoi donare se hai tra 18 e 60 anni, pesi più di 50 kg e hai uno stile di vita sano.",
-      items: ["18–60 anni", "Più di 50 kg", "Stile di vita sano"],
+      items: [
+          "Età compresa tra 18 e 60 anni",
+          "Peso corporeo superiore a 50 kg",
+          "Buono stato di salute",
+          "Stile di vita sano",
+      ],
       emoji: "✅",
     },
     {
@@ -39,12 +44,12 @@ export default function App() {
 
   const stats = [
     {
-      value: "450 ml",
-      label: "Volume del prelievo",
+      value: "10/15 min",
+      label: "Durata della donazione",
     },
     {
-      value: "10/15 min",
-      label: "Durata media",
+      value: "450 ml",
+      label: "Volume del prelievo",
     },
     {
       value: "90 giorni",
@@ -139,7 +144,8 @@ export default function App() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-[#005bbb] border-b border-white/15">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-center">
           <div className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide">
-            <a href="#avis" className="hover:text-white/70 transition">
+            <a href="https://www.aviscalabria.it/" target="_blank"
+                rel="noopener noreferrer" className="hover:text-white/70 transition">
               AVIS
             </a>
             <a href="#donazione" className="hover:text-white/70 transition">
@@ -158,7 +164,8 @@ export default function App() {
         </div>
       </nav>
 
-<section className="relative min-h-[72vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-10 pb-10">        <div className="relative z-10 w-full max-w-7xl mx-auto">
+<section className="relative min-h-[62vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-4 pb-10">
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
           <h1 className="text-[clamp(2.25rem,7.5vw,7rem)] font-black uppercase leading-none whitespace-nowrap tracking-tight">
             Il sangue <span className="text-red-500">salva vite.</span>
           </h1>
@@ -184,9 +191,9 @@ export default function App() {
         {sections.map((section) => (
           <article
             key={section.title}
-            className="group bg-white text-[#005bbb] rounded-[2rem] p-7 md:p-10 shadow-xl hover:-translate-y-2 transition-all duration-300 text-center"
+            className="group bg-white text-[#005bbb] rounded-[2rem] p-7 md:p-10 shadow-xl hover:-translate-y-2 transition-all duration-300 text-left"
           >
-            <div className="flex items-start justify-center gap-3 mb-5">
+            <div className="flex items-start justify-start gap-3 mb-5">
               <span className="text-xl leading-none mt-1 group-hover:scale-110 transition-transform duration-300 inline-block">
                 {section.emoji}
               </span>
@@ -203,6 +210,11 @@ export default function App() {
                   section.title
                 )}
               </h3>
+              {section.title === "Chi può donare?" ? (
+                  <p className="mt-3 text-base font-bold uppercase tracking-wide text-[#005bbb]/80">
+                    Ecco i requisiti base!
+                  </p>
+                ) : null}
             </div>
 
             {section.title !== "Chi può donare?" ? (
@@ -212,7 +224,7 @@ export default function App() {
             ) : null}
 
             {section.items ? (
-              <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <div className="mt-8 flex flex-wrap justify-start gap-3">
                 {section.items.map((item) => (
                   <span
                     key={item}
@@ -229,11 +241,14 @@ export default function App() {
 
       <section className="bg-white text-[#005bbb] py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-black uppercase leading-tight">
-            1 Donazione =
-            <br />
-            fino a 3 vite salvate
+          <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight">
+            Una donazione può salvare fino a 3 vite
           </h2>
+          
+          <p className="mt-6 text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto text-[#005bbb]/85">
+            Il sangue è fondamentale per interventi chirurgici, emergenze,
+            terapie oncologiche e malattie croniche.
+          </p>
 
           <div className="grid md:grid-cols-4 gap-6 mt-20">
             {donationUses.map((item) => (
@@ -253,11 +268,8 @@ export default function App() {
           <p className="text-white/80 uppercase tracking-[0.12em] md:tracking-[0.3em] font-bold mb-4 whitespace-nowrap text-sm md:text-base">
             Tempi, quantità e frequenza
           </p>
-          <h2 className="text-5xl md:text-6xl font-black uppercase leading-tight">
+          <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight">
             La donazione
-            <span className="block text-3xl md:text-4xl mt-3 text-white/90">
-              Quanto dura, quanto si dona, ogni quanto si può fare
-            </span>
           </h2>
         </div>
 
@@ -280,8 +292,7 @@ export default function App() {
             <p className="uppercase tracking-[0.3em] font-bold text-[#005bbb]/70 mb-4">
               Preparati al meglio
             </p>
-            <h2 className="text-5xl md:text-6xl font-black uppercase leading-tight">
-              Cosa mangiare prima della donazione
+            <h2 className="text-2xl md:text-5xl font-black uppercase leading-tight">
             </h2>
             <p className="mt-6 text-xl text-[#005bbb]/80 max-w-3xl mx-auto leading-relaxed">
               Bastano poche attenzioni per arrivare al prelievo in modo sereno e sicuro.
