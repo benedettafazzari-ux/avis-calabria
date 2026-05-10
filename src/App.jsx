@@ -179,7 +179,9 @@ export default function App() {
         <div className="absolute bottom-0 left-0 w-full h-32 bg-white rounded-t-[100%]" />
 
         <a
-          href="#avis"
+          href="https://www.aviscalabria.it/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="absolute left-1/2 bottom-16 z-20 -translate-x-1/2 translate-y-1/2 inline-flex items-center justify-center bg-white text-[#005bbb] border-4 border-[#005bbb] hover:scale-105 transition-all duration-300 px-10 py-5 rounded-full text-xl font-black shadow-xl"
         >
           Diventa Donatore
@@ -198,7 +200,7 @@ export default function App() {
               <span className="text-xl leading-none mt-1 group-hover:scale-110 transition-transform duration-300 inline-block">
                 {section.emoji}
               </span>
-             <h3 className="text-2xl md:text-3xl font-black uppercase leading-tight text-left">
+             <h3 className="text-xl md:text-3xl font-black uppercase leading-tight text-left">
                 {section.title === "Perché donare il sangue?" ? (
                   <>
                     Perché donare
@@ -207,6 +209,8 @@ export default function App() {
                   </>
                 ) : section.title === "Chi può donare?" ? (
                   <span className="whitespace-nowrap">Chi può donare?</span>
+                ) : section.title === "Come ottenere l'idoneità" ? (
+                  <span className="whitespace-nowrap">Come ottenere l'idoneità</span>
                 ) : (
                   section.title
                 )}
@@ -262,8 +266,10 @@ export default function App() {
 
       <section className="bg-white text-[#005bbb] py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
-         <h2 className="text-2xl md:text-4xl font-black uppercase leading-tight">
+         <h2 className="text-xl md:text-4xl font-black uppercase leading-tight">
             Una donazione può salvare
+            <br />
+            <span className="whitespace-nowrap">Una donazione può salvare</span>
             <br />
             <span className="text-4xl md:text-6xl">fino a 3 vite</span>
           </h2>
@@ -287,7 +293,7 @@ export default function App() {
 
       <section id="donazione" className="py-28 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight">
+          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight whitespace-nowrap">
             La donazione di sangue
           </h2>
           
