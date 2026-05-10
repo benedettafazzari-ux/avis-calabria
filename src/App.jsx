@@ -14,10 +14,10 @@ export default function App() {
       content:
         "Puoi donare se hai tra 18 e 60 anni, pesi più di 50 kg e hai uno stile di vita sano.",
       items: [
-        "Età compresa tra 18 e 60 anni",
-        "Peso corporeo superiore a 50 kg",
-        "Buono stato di salute",
-        "Stile di vita sano",
+          "Età compresa tra 18 e 60 anni",
+          "Peso corporeo superiore a 50 kg",
+          "Buono stato di salute",
+          "Stile di vita sano",
       ],
       emoji: "✅",
     },
@@ -124,14 +124,13 @@ export default function App() {
   ];
 
   const idoneitaSteps = [
-    "Contatta la sede AVIS più vicina",
-    "Svolgi colloquio medico e controlli",
-    "Ricevi l’esito e la conferma finale",
+    "Contatta la sede AVIS più vicina.",
+    "Compila il questionario e fai i controlli.",
+    "Ricevi l’esito e la conferma del medico.",
   ];
-
   const socialLinks = ["Instagram", "TikTok", "Facebook"];
 
-  console.assert(sections.length === 3, "Expected 3 info sections");
+  console.assert(sections.length === 4, "Expected 4 info sections");
   console.assert(donationUses.length === 4, "Expected 4 donation use cards");
   console.assert(stats.length === 3, "Expected 3 donation stat cards");
   console.assert(foodTips.length === 2, "Expected 2 food tip cards");
@@ -148,9 +147,7 @@ export default function App() {
               href="https://www.aviscalabria.it/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white/70 transition"
-            >
-              AVIS
+              className="absolute left-1/2 bottom-16 z-20 -translate-x-1/2 translate-y-1/2 inline-flex items-center justify-center bg-white text-[#005bbb] border-4 border-[#005bbb] hover:scale-105 transition-all duration-300 px-10 py-5 rounded-full text-xl font-black shadow-xl">
             </a>
             <a href="#donazione" className="hover:text-white/70 transition">
               Donazione
@@ -168,60 +165,52 @@ export default function App() {
         </div>
       </nav>
 
-      <section className="relative bg-[#005bbb] text-white px-6 pt-8 pb-0 text-center overflow-hidden">
-        <div className="mx-auto mb-14 text-5xl font-black tracking-tight">
-          <span className="text-white">AV</span>
-          <span className="text-red-500">I</span>
-          <span className="text-white">S</span>
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto pb-20">
-          <h1 className="text-[clamp(2rem,8vw,5rem)] font-black uppercase leading-tight tracking-tight">
+<section className="relative min-h-[48vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-2 pb-6">
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
+          <h1 className="text-[clamp(2rem,7vw,6rem)] font-black uppercase leading-tight tracking-tight">
             Il sangue <span className="text-red-500">salva vite.</span>
           </h1>
 
-          <h2 className="mt-7 text-[clamp(1.45rem,6vw,3.5rem)] font-black uppercase leading-snug max-w-[360px] mx-auto">
+          <h2 className="mt-5 text-2xl md:text-5xl font-bold uppercase leading-snug text-white/95 max-w-[320px] mx-auto">
             La tua scelta può fare la differenza.
           </h2>
         </div>
 
-        <div className="relative z-20 mx-[-1.5rem] bg-white rounded-t-[3rem] px-6 pt-10 pb-12">
-          <a
-            href="https://www.aviscalabria.it/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-auto flex w-full max-w-[340px] items-center justify-center rounded-full border-[6px] border-[#005bbb] bg-white px-8 py-6 text-3xl font-black leading-tight text-[#005bbb] shadow-2xl"
-          >
-            <span>
-              Diventa
-              <br />
-              Donatore
-            </span>
-          </a>
-        </div>
+      <div className="absolute bottom-0 left-0 w-full h-28 bg-white rounded-t-[3rem]" />
+
+        <a
+          href="https://www.aviscalabria.it/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute left-1/2 bottom-0 z-20 -translate-x-1/2 translate-y-1/2 inline-flex items-center justify-center bg-white text-[#005bbb] hover:bg-[#005bbb] hover:text-white border-4 border-[#005bbb] transition-all duration-300 px-9 py-4 rounded-full text-lg font-black shadow-2xl"
+        >
+          Diventa Donatore
+        </a>
       </section>
 
       <section
         id="avis"
-        className="relative z-10 py-16 md:py-28 px-4 max-w-7xl mx-auto grid gap-6 md:gap-10 md:grid-cols-2"
-      >
+        className="relative z-10 py-16 md:py-28 px-4 max-w-7xl mx-auto grid gap-6 md:gap-10 md:grid-cols-2"      >
         {sections.map((section) => (
           <article
             key={section.title}
-            className="group bg-white text-[#005bbb] rounded-[2rem] p-6 md:p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 text-left"
+            className="group bg-white text-[#005bbb] rounded-[1.5rem] p-5 md:p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 text-left"
           >
             <div className="flex items-start justify-start gap-3 mb-4">
               <span className="text-xl leading-none mt-1 group-hover:scale-110 transition-transform duration-300 inline-block">
                 {section.emoji}
               </span>
-
-              <h3 className="text-xl md:text-3xl font-black uppercase leading-tight text-left">
-                {section.title === "Chi può donare?" ? (
+             <h3 className="text-xl md:text-3xl font-black uppercase leading-tight text-left">
+                {section.title === "Perché donare il sangue?" ? (
+                  <>
+                    Perché donare
+                    <br />
+                    il sangue?
+                  </>
+                ) : section.title === "Chi può donare?" ? (
                   <span className="whitespace-nowrap">Chi può donare?</span>
                 ) : section.title === "Come ottenere l'idoneità" ? (
-                  <span className="whitespace-nowrap">
-                    Come ottenere l'idoneità
-                  </span>
+                  <span className="whitespace-nowrap">Come ottenere l'idoneità</span>
                 ) : (
                   section.title
                 )}
@@ -230,11 +219,11 @@ export default function App() {
 
             {section.title !== "Chi può donare?" &&
             section.title !== "Come ottenere l'idoneità" ? (
-              <p className="text-base md:text-lg leading-snug text-[#005bbb]/90">
+              <p className="text-lg leading-relaxed text-[#005bbb]/90 text-justify">
                 {section.content}
               </p>
             ) : null}
-
+            
             {section.title === "Come ottenere l'idoneità" ? (
               <div className="mt-6 flex flex-col gap-3">
                 {idoneitaSteps.map((step, index) => (
@@ -245,7 +234,7 @@ export default function App() {
                     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[#005bbb] text-sm font-black">
                       {index + 1}
                     </span>
-
+            
                     <span className="text-sm md:text-base leading-snug">
                       {step}
                     </span>
@@ -255,11 +244,11 @@ export default function App() {
             ) : null}
 
             {section.items ? (
-              <div className="mt-6 grid grid-cols-2 gap-4">
+              <div className="mt-6 flex flex-wrap justify-start gap-3">
                 {section.items.map((item) => (
                   <span
                     key={item}
-                    className="flex h-14 w-full items-center justify-center rounded-full bg-[#005bbb] text-center text-base font-black text-white shadow-md"
+                    className="bg-[#005bbb] text-white px-5 py-3 rounded-full font-bold shadow-md"
                   >
                     {item}
                   </span>
@@ -272,15 +261,15 @@ export default function App() {
 
       <section className="bg-white text-[#005bbb] py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">
+         <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">
             Una donazione può salvare fino a 3 vite
           </h2>
-
+          
           <p className="mt-10 mb-4 text-xl md:text-3xl text-[#005bbb]/80 font-black">
             Il sangue è fondamentale per:
           </p>
 
-          <div className="grid md:grid-cols-4 gap-6 mt-6">
+           <div className="grid md:grid-cols-4 gap-6 mt-6">
             {donationUses.map((item) => (
               <div
                 key={item}
@@ -298,7 +287,7 @@ export default function App() {
           <h2 className="text-2xl md:text-5xl font-black uppercase leading-tight whitespace-nowrap">
             La donazione di sangue
           </h2>
-
+          
           <p className="mt-4 text-white/80 uppercase tracking-[0.12em] md:tracking-[0.3em] font-bold whitespace-nowrap text-sm md:text-base">
             Tempi, quantità e frequenza
           </p>
@@ -323,14 +312,11 @@ export default function App() {
             <p className="uppercase tracking-[0.3em] font-bold text-[#005bbb]/70 mb-4">
               Preparati al meglio
             </p>
-
             <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">
               Cosa mangiare prima della donazione
             </h2>
-
             <p className="mt-6 text-xl text-[#005bbb]/80 max-w-3xl mx-auto leading-relaxed">
-              Bastano poche attenzioni per arrivare al prelievo in modo sereno e
-              sicuro.
+              Bastano poche attenzioni per arrivare al prelievo in modo sereno e sicuro.
             </p>
           </div>
 
@@ -343,10 +329,7 @@ export default function App() {
                 <h3 className="text-3xl font-black uppercase mb-5">
                   {tip.title}
                 </h3>
-
-                <p className="text-xl leading-relaxed text-white/90">
-                  {tip.text}
-                </p>
+                <p className="text-xl leading-relaxed text-white/90">{tip.text}</p>
               </article>
             ))}
           </div>
@@ -359,71 +342,66 @@ export default function App() {
             <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-8">
               Trova la tua AVIS provinciale
             </h2>
-
             <p className="text-xl leading-relaxed text-white/90 max-w-3xl mx-auto">
-              Clicca sulla provincia della mappa o sui bottoni per aprire la
-              pagina ufficiale.
+              Clicca sulla provincia della mappa o sui bottoni per aprire la pagina ufficiale.
             </p>
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="text-center lg:text-left">
               <p className="text-xl md:text-3xl font-black uppercase leading-tight">
-                Scegli la tua provincia e trova subito il riferimento AVIS più
-                vicino a te.
+                Scegli la tua provincia e trova subito il riferimento AVIS più vicino a te.
               </p>
             </div>
 
             <div className="bg-white rounded-[2rem] p-8 shadow-xl">
-              <div className="relative mx-auto w-full max-w-[360px] h-[560px]">
-                <svg
-                  viewBox="0 0 240 420"
-                  className="absolute inset-0 w-full h-full"
-                  aria-label="Sagoma stilizzata della Calabria"
+            <div className="relative mx-auto w-full max-w-[360px] h-[560px]">
+              <svg
+                viewBox="0 0 240 420"
+                className="absolute inset-0 w-full h-full"
+                aria-label="Sagoma stilizzata della Calabria"
+              >
+                <path
+                  d="M72 8 C112 18 136 42 144 78 C152 116 184 132 196 164 C208 196 180 226 190 260 C200 292 220 312 204 344 C190 374 152 372 140 404 C112 392 108 356 88 332 C66 306 42 284 52 250 C62 214 36 190 42 154 C48 116 24 74 48 40 C54 30 62 18 72 8 Z"
+                  fill={BLUE}
+                  stroke={BLUE}
+                  strokeWidth="8"
+                  strokeLinejoin="round"
+                />
+              </svg>
+
+              {provinces.map((province) => (
+                <a
+                  key={province.sigla}
+                  href={province.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute -translate-x-1/2 -translate-y-1/2 bg-white text-[#005bbb] border-4 border-[#005bbb] rounded-full w-20 h-20 flex flex-col items-center justify-center font-black shadow-xl hover:scale-110 transition-all duration-300 cursor-pointer"
+                  style={{ top: province.top, left: province.left }}
+                  aria-label={`Apri AVIS Provinciale ${province.name}`}
+                  title={`AVIS Provinciale ${province.name}`}
                 >
-                  <path
-                    d="M72 8 C112 18 136 42 144 78 C152 116 184 132 196 164 C208 196 180 226 190 260 C200 292 220 312 204 344 C190 374 152 372 140 404 C112 392 108 356 88 332 C66 306 42 284 52 250 C62 214 36 190 42 154 C48 116 24 74 48 40 C54 30 62 18 72 8 Z"
-                    fill={BLUE}
-                    stroke={BLUE}
-                    strokeWidth="8"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                  <span className="text-xl leading-none">{province.sigla}</span>
+                  <span className="text-[10px] mt-1 font-bold uppercase">
+                    Vai
+                  </span>
+                </a>
+              ))}
+            </div>
 
-                {provinces.map((province) => (
-                  <a
-                    key={province.sigla}
-                    href={province.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute -translate-x-1/2 -translate-y-1/2 bg-white text-[#005bbb] border-4 border-[#005bbb] rounded-full w-20 h-20 flex flex-col items-center justify-center font-black shadow-xl hover:scale-110 transition-all duration-300 cursor-pointer"
-                    style={{ top: province.top, left: province.left }}
-                    aria-label={`Apri AVIS Provinciale ${province.name}`}
-                    title={`AVIS Provinciale ${province.name}`}
-                  >
-                    <span className="text-xl leading-none">
-                      {province.sigla}
-                    </span>
-                    <span className="text-[10px] mt-1 font-bold uppercase">
-                      Vai
-                    </span>
-                  </a>
-                ))}
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-8">
-                {provinces.map((province) => (
-                  <a
-                    key={province.name}
-                    href={province.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#005bbb] text-white rounded-full px-4 py-3 text-center text-sm font-bold hover:opacity-90 transition"
-                  >
-                    {province.name}
-                  </a>
-                ))}
-              </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-8">
+              {provinces.map((province) => (
+                <a
+                  key={province.name}
+                  href={province.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#005bbb] text-white rounded-full px-4 py-3 text-center text-sm font-bold hover:opacity-90 transition"
+                >
+                  {province.name}
+                </a>
+              ))}
+            </div>
             </div>
           </div>
         </div>
@@ -459,17 +437,14 @@ export default function App() {
         className="relative py-36 px-6 text-center overflow-hidden"
       >
         <div className="relative max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-5xl font-black uppercase leading-tight">
+         <h2 className="text-2xl md:text-5xl font-black uppercase leading-tight">
             Dona il tuo tempo.
             <br />
-            <span className="whitespace-nowrap">
-              Diventa volontario AVIS.
-            </span>
+            <span className="whitespace-nowrap">Diventa volontario AVIS.</span>
           </h2>
 
           <p className="text-xl md:text-2xl mt-10 text-white/85 leading-relaxed max-w-3xl mx-auto">
-            Partecipa ad eventi, attività sul territorio e iniziative dedicate
-            ai giovani.
+            Partecipa ad eventi, attività sul territorio e iniziative dedicate ai giovani.
           </p>
 
           <a
@@ -501,9 +476,7 @@ export default function App() {
             ))}
           </div>
 
-          <p>
-            AVIS Regionale Calabria — Consulta Giovani AVIS Regionale Calabria
-          </p>
+          <p>AVIS Regionale Calabria — Consulta Giovani AVIS Regionale Calabria</p>
         </div>
       </footer>
     </div>
