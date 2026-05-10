@@ -182,7 +182,7 @@ export default function App() {
           href="https://www.aviscalabria.it/"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute left-1/2 bottom-10 z-20 -translate-x-1/2 translate-y-1/2 inline-flex items-center justify-center bg-white text-[#005bbb] hover:bg-[#005bbb] hover:text-white border-4 border-[#005bbb] transition-all duration-300 px-9 py-4 rounded-full text-lg font-black shadow-2xl"
+          className="absolute left-1/2 bottom-0 z-20 -translate-x-1/2 translate-y-1/2 inline-flex items-center justify-center bg-white text-[#005bbb] hover:bg-[#005bbb] hover:text-white border-4 border-[#005bbb] transition-all duration-300 px-9 py-4 rounded-full text-lg font-black shadow-2xl"
         >
           Diventa Donatore
         </a>
