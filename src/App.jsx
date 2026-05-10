@@ -210,17 +210,32 @@ export default function App() {
                   section.title
                 )}
               </h3>
-              {section.title === "Chi può donare?" ? (
-                <p className="mt-2 text-sm md:text-base font-bold uppercase tracking-wide text-[#005bbb]/80">
-                  Ecco i requisiti base!
-                </p>
-              ) : null}
             </div>
 
-            {section.title !== "Chi può donare?" ? (
+            {section.title !== "Chi può donare?" &&
+            section.title !== "Come ottenere l'idoneità" ? (
               <p className="text-lg leading-relaxed text-[#005bbb]/90 text-justify">
                 {section.content}
               </p>
+            ) : null}
+            
+            {section.title === "Come ottenere l'idoneità" ? (
+              <div className="mt-6 flex flex-col gap-3">
+                {idoneitaSteps.map((step, index) => (
+                  <div
+                    key={step}
+                    className="flex items-start gap-3 bg-[#005bbb] text-white rounded-2xl px-4 py-3 font-bold"
+                  >
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[#005bbb] text-sm font-black">
+                      {index + 1}
+                    </span>
+            
+                    <span className="text-sm md:text-base leading-snug">
+                      {step}
+                    </span>
+                  </div>
+                ))}
+              </div>
             ) : null}
 
             {section.items ? (
@@ -241,9 +256,15 @@ export default function App() {
 
       <section className="bg-white text-[#005bbb] py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight">
-            Una donazione può salvare fino a 3 vite
+          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">
+            Una donazione può salvare
+            <br />
+            fino a 3 vite
           </h2>
+          
+          <p className="mt-6 text-lg md:text-xl text-[#005bbb]/80 font-semibold">
+            Il sangue è fondamentale per:
+          </p>
           
           <p className="mt-6 text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto text-[#005bbb]/85">
             Il sangue è fondamentale per interventi chirurgici, emergenze,
@@ -265,12 +286,13 @@ export default function App() {
 
       <section id="donazione" className="py-28 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-20">
-          <p className="text-white/80 uppercase tracking-[0.12em] md:tracking-[0.3em] font-bold mb-4 whitespace-nowrap text-sm md:text-base">
-            Tempi, quantità e frequenza
-          </p>
           <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight">
             La donazione
           </h2>
+          
+          <p className="mt-4 text-white/80 uppercase tracking-[0.12em] md:tracking-[0.3em] font-bold whitespace-nowrap text-sm md:text-base">
+            Tempi, quantità e frequenza
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-10 text-center">
