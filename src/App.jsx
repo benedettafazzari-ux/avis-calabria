@@ -176,7 +176,7 @@ export default function App() {
           </h2>
         </div>
 
-       <div className="absolute bottom-0 left-0 w-full h-20 bg-white" />
+       <div className="absolute bottom-0 left-0 w-full h-30 bg-white" />
 
         <a
           href="https://www.aviscalabria.it/"
