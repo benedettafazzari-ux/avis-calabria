@@ -1,97 +1,106 @@
-export default function App() {
-  const provinceLinks = {
-    Catanzaro: "https://www.aviscalabria.it/sedi/catanzaro/",
-    Cosenza: "https://www.aviscalabria.it/sedi/cosenza/",
-    Crotone: "https://www.aviscalabria.it/sedi/crotone/",
-    "Reggio Calabria": "https://www.aviscalabria.it/sedi/reggio-calabria/",
-    "Vibo Valentia": "https://www.aviscalabria.it/sedi/vibo-valentia/",
-  };
+export default function AvisLandingPage() {
+  const sections = [
+    {
+      title: "Cos'è AVIS?",
+      content:
+        "AVIS è la più grande organizzazione italiana di volontariato del sangue e contribuisce a garantire circa il 70% del fabbisogno nazionale.",
+      items: ["Solidarietà", "Gratuità", "Anonimato", "Periodicità"],
+    },
+    {
+      title: "Perché donare il sangue?",
+      content:
+        "Una donazione può salvare fino a 3 vite. Il sangue è fondamentale per emergenze, interventi chirurgici, terapie oncologiche e malattie croniche.",
+    },
+    {
+      title: "Chi può donare?",
+      content:
+        "Puoi donare se hai tra 18 e 60 anni, pesi più di 50 kg e hai uno stile di vita sano.",
+    },
+    {
+      title: "Come ottenere l'idoneità",
+      content:
+        "Contatta la sede AVIS più vicina, svolgi visita medica ed esami e ricevi la conferma del medico.",
+    },
+  ];
+
+  const faq = [
+    {
+      q: "Fa male?",
+      a: "Il fastidio è minimo e dura pochi secondi.",
+    },
+    {
+      q: "Quanto dura una donazione?",
+      a: "Circa 10-15 minuti.",
+    },
+    {
+      q: "È sicuro?",
+      a: "Sì, tutto il materiale utilizzato è sterile e monouso.",
+    },
+  ];
 
   return (
-    <div
-      style={{
-        fontFamily: "Arial, sans-serif",
-        backgroundColor: "#ffffff",
-        color: "#0f172a",
-        lineHeight: 1.6,
-      }}
-    >
-      {/* HERO */}
-      <section
-        style={{
-          backgroundColor: "#005bbb",
-          color: "white",
-          padding: "90px 20px 130px",
-          textAlign: "center",
-        }}
-      >
-        <h1
-          style={{
-            fontSize: "52px",
-            fontWeight: "bold",
-            marginBottom: "20px",
-          }}
-        >
-          IL SANGUE <span style={{ color: "#ff2b2b" }}>SALVA VITE</span>
+    <div className="bg-[#005bbb] text-white min-h-screen font-sans overflow-x-hidden">
+      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-white rounded-t-[100%] opacity-90"></div>
+
+        <h1 className="text-5xl md:text-7xl font-black leading-tight max-w-5xl uppercase tracking-tight z-10">
+          Il sangue <span className="text-red-500">salva vite.</span>
         </h1>
 
-        <p
-          style={{
-            fontSize: "20px",
-            maxWidth: "750px",
-            margin: "0 auto",
-          }}
-        >
-          Donare sangue è un gesto semplice che può aiutare fino a tre persone.
-        </p>
-
-        <div style={{ marginTop: "40px" }}>
-          <a
-            href="#donazione"
-            style={{
-              backgroundColor: "white",
-              color: "#005bbb",
-              padding: "16px 34px",
-              borderRadius: "999px",
-              textDecoration: "none",
-              fontWeight: "bold",
-              fontSize: "18px",
-            }}
-          >
-            Diventa donatore
-          </a>
-        </div>
-      </section>
-
-      {/* CHI SIAMO */}
-      <section style={{ padding: "80px 20px", maxWidth: "1100px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "38px", marginBottom: "30px" }}>
-          ❤️ Cos'è AVIS?
+        <h2 className="text-3xl md:text-5xl font-bold mt-6 max-w-4xl uppercase z-10">
+          La tua scelta può fare la differenza.
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-            gap: "20px",
-          }}
-        >
+        <button className="mt-10 bg-red-500 hover:bg-red-600 transition px-8 py-4 rounded-full text-xl font-bold shadow-2xl z-10">
+          Diventa Donatore
+        </button>
+      </section>
+
+      <section className="py-24 px-6 max-w-6xl mx-auto grid gap-10 md:grid-cols-2">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/10 shadow-2xl hover:scale-[1.02] transition"
+          >
+            <h3 className="text-3xl font-black mb-6 uppercase">
+              {section.title}
+            </h3>
+
+            <p className="text-lg leading-relaxed text-white/90">
+              {section.content}
+            </p>
+
+            {section.items && (
+              <div className="mt-6 flex flex-wrap gap-3">
+                {section.items.map((item) => (
+                  <span
+                    key={item}
+                    className="bg-red-500/90 px-4 py-2 rounded-full font-semibold"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </section>
+
+      <section className="bg-white text-[#005bbb] py-24 px-6 text-center">
+        <h2 className="text-5xl md:text-6xl font-black uppercase">
+          1 Donazione = Fino a 3 vite salvate
+        </h2>
+
+        <div className="grid md:grid-cols-4 gap-6 mt-16 max-w-6xl mx-auto">
           {[
-            "Associazione volontaria",
-            "Presente in tutta Italia",
-            "Promuove la donazione",
-            "Aiuta migliaia di persone",
+            "Emergenze",
+            "Interventi chirurgici",
+            "Terapie oncologiche",
+            "Malattie croniche",
           ].map((item) => (
             <div
               key={item}
-              style={{
-                backgroundColor: "#005bbb",
-                color: "white",
-                padding: "25px",
-                borderRadius: "20px",
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
+              className="bg-[#005bbb] text-white rounded-3xl p-8 text-xl font-bold shadow-xl"
             >
               {item}
             </div>
@@ -99,270 +108,67 @@ export default function App() {
         </div>
       </section>
 
-      {/* PERCHÉ DONARE */}
-      <section
-        style={{
-          backgroundColor: "#f8fafc",
-          padding: "80px 20px",
-        }}
-      >
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "38px", marginBottom: "25px" }}>
-            🩸 Perché donare <br /> il sangue?
-          </h2>
-
-          <p style={{ fontSize: "20px", maxWidth: "850px" }}>
-            Ogni donazione può salvare fino a tre vite. Il sangue è fondamentale
-            per interventi chirurgici, emergenze, cure oncologiche e malattie croniche.
-          </p>
-        </div>
-      </section>
-
-      {/* CHI PUÒ DONARE */}
-      <section style={{ padding: "80px 20px", maxWidth: "1100px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "38px", marginBottom: "30px" }}>
-          ✅ Chi può donare
+      <section className="py-24 px-6 max-w-5xl mx-auto">
+        <h2 className="text-5xl font-black uppercase text-center mb-16">
+          La donazione
         </h2>
 
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "15px",
-          }}
-        >
-          {[
-            "18-60 anni",
-            "Peso superiore a 50kg",
-            "Buona salute",
-            "Stile di vita sano",
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                backgroundColor: "#005bbb",
-                color: "white",
-                padding: "14px 22px",
-                borderRadius: "999px",
-                fontWeight: "bold",
-              }}
-            >
-              {item}
-            </div>
-          ))}
+        <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="bg-white/10 rounded-3xl p-10 shadow-xl">
+            <p className="text-5xl font-black">450 ml</p>
+            <p className="mt-4 text-xl">Volume del prelievo</p>
+          </div>
+
+          <div className="bg-white/10 rounded-3xl p-10 shadow-xl">
+            <p className="text-5xl font-black">10/15 min</p>
+            <p className="mt-4 text-xl">Durata media</p>
+          </div>
+
+          <div className="bg-white/10 rounded-3xl p-10 shadow-xl">
+            <p className="text-5xl font-black">90 giorni</p>
+            <p className="mt-4 text-xl">Tra due donazioni di sangue</p>
+          </div>
         </div>
       </section>
 
-      {/* DONAZIONE */}
-      <section
-        id="donazione"
-        style={{
-          backgroundColor: "#f8fafc",
-          padding: "80px 20px",
-        }}
-      >
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "38px", marginBottom: "40px" }}>
-            📅 La donazione: quanto e quando
+      <section className="bg-white text-[#005bbb] py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-5xl font-black uppercase mb-10">
+            FAQ
           </h2>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-              gap: "25px",
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: "white",
-                padding: "25px",
-                borderRadius: "20px",
-              }}
-            >
-              <h3>Quanto dura?</h3>
-              <p>La donazione dura circa 10 minuti.</p>
-            </div>
-
-            <div
-              style={{
-                backgroundColor: "white",
-                padding: "25px",
-                borderRadius: "20px",
-              }}
-            >
-              <h3>Ogni quanto?</h3>
-              <p>Gli uomini possono donare 4 volte l’anno, le donne 2.</p>
-            </div>
-
-            <div
-              style={{
-                backgroundColor: "white",
-                padding: "25px",
-                borderRadius: "20px",
-              }}
-            >
-              <h3>Prima del prelievo</h3>
-              <p>
-                Cena leggera la sera prima e colazione semplice il giorno del prelievo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ALIMENTAZIONE */}
-      <section style={{ padding: "80px 20px", maxWidth: "1100px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "38px", marginBottom: "30px" }}>
-          🍎 Cosa mangiare
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
-            gap: "25px",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "#005bbb",
-              color: "white",
-              padding: "30px",
-              borderRadius: "20px",
-            }}
-          >
-            <h3>La sera prima</h3>
-            <p>
-              Preferisci una cena leggera evitando alcolici e cibi troppo grassi.
-            </p>
-          </div>
-
-          <div
-            style={{
-              backgroundColor: "#005bbb",
-              color: "white",
-              padding: "30px",
-              borderRadius: "20px",
-            }}
-          >
-            <h3>La mattina</h3>
-            <p>
-              Sì a tè, caffè poco zuccherato, frutta, spremute e carboidrati semplici.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section
-        style={{
-          backgroundColor: "#f8fafc",
-          padding: "80px 20px",
-        }}
-      >
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "38px", marginBottom: "30px" }}>
-            ❓ FAQ
-          </h2>
-
-          <div style={{ display: "grid", gap: "20px" }}>
-            {[
-              {
-                q: "Se ho un tatuaggio posso donare?",
-                a: "Sì, ma bisogna attendere 4 mesi dal tatuaggio.",
-              },
-              {
-                q: "E se fumo?",
-                a: "Si può donare, evitando di fumare subito prima e dopo.",
-              },
-              {
-                q: "Donare è sicuro?",
-                a: "Sì, il materiale utilizzato è sterile e monouso.",
-              },
-            ].map((faq) => (
+          <div className="space-y-6 text-left">
+            {faq.map((item, index) => (
               <div
-                key={faq.q}
-                style={{
-                  backgroundColor: "white",
-                  padding: "25px",
-                  borderRadius: "20px",
-                }}
+                key={index}
+                className="bg-[#005bbb] text-white rounded-2xl p-6 shadow-xl"
               >
-                <h3>{faq.q}</h3>
-                <p>{faq.a}</p>
+                <h3 className="text-2xl font-bold">{item.q}</h3>
+                <p className="mt-3 text-lg text-white/90">{item.a}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* PROVINCE */}
-      <section style={{ padding: "80px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "38px", marginBottom: "35px" }}>
-          📍 Trova la tua AVIS provinciale
+      <section className="py-32 px-6 text-center">
+        <h2 className="text-5xl md:text-7xl font-black uppercase max-w-5xl mx-auto leading-tight">
+          Dona il tuo tempo.
+          <br />
+          Diventa volontario AVIS.
         </h2>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: "15px",
-            maxWidth: "900px",
-            margin: "0 auto",
-          }}
-        >
-          {Object.entries(provinceLinks).map(([name, link]) => (
-            <a
-              key={name}
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                backgroundColor: "#005bbb",
-                color: "white",
-                padding: "14px 24px",
-                borderRadius: "999px",
-                textDecoration: "none",
-                fontWeight: "bold",
-              }}
-            >
-              {name}
-            </a>
-          ))}
-        </div>
+        <p className="text-xl mt-8 max-w-2xl mx-auto text-white/90 leading-relaxed">
+          Partecipa ad eventi, attività sul territorio e iniziative dedicate ai giovani.
+        </p>
+
+        <button className="mt-12 bg-white text-[#005bbb] hover:scale-105 transition px-10 py-5 rounded-full text-xl font-black shadow-2xl">
+          Unisciti ad AVIS
+        </button>
       </section>
 
-      {/* VOLONTARIO */}
-      <section
-        style={{
-          backgroundColor: "#005bbb",
-          color: "white",
-          textAlign: "center",
-          padding: "90px 20px",
-        }}
-      >
-        <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>
-          🎬 Dona il tuo tempo.
-        </h2>
-
-        <h3 style={{ fontSize: "30px" }}>
-          Diventa volontario AVIS
-        </h3>
-      </section>
-
-      {/* FOOTER */}
-      <footer
-        style={{
-          backgroundColor: "#003f80",
-          color: "white",
-          textAlign: "center",
-          padding: "25px",
-          fontSize: "14px",
-        }}
-      >
-        AVIS Regionale Calabria – Consulta Giovani AVIS Regionale Calabria
+      <footer className="border-t border-white/20 py-10 text-center text-white/70 text-sm">
+        AVIS Calabria — Consulta Giovani Regionale
       </footer>
     </div>
   );
