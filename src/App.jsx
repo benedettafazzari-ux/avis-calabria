@@ -129,6 +129,11 @@ export default function App() {
     },
   ];
 
+  const idoneitaSteps = [
+    "Contatta la sede AVIS più vicina",
+    "Compila il questionario e fai i controlli",
+    "Ricevi l’esito e la conferma del medico",
+  ];
   const socialLinks = ["Instagram", "TikTok", "Facebook"];
 
   console.assert(sections.length === 4, "Expected 4 info sections");
@@ -314,7 +319,8 @@ export default function App() {
             <p className="uppercase tracking-[0.3em] font-bold text-[#005bbb]/70 mb-4">
               Preparati al meglio
             </p>
-            <h2 className="text-2xl md:text-5xl font-black uppercase leading-tight">
+            <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight">
+              Cosa mangiare prima della donazione
             </h2>
             <p className="mt-6 text-xl text-[#005bbb]/80 max-w-3xl mx-auto leading-relaxed">
               Bastano poche attenzioni per arrivare al prelievo in modo sereno e sicuro.
