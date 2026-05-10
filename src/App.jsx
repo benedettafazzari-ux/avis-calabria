@@ -10,12 +10,6 @@ export default function App() {
       emoji: "❤️",
     },
     {
-      title: "Perché donare il sangue?",
-      content:
-        "Una donazione può salvare fino a 3 vite. Il sangue è fondamentale per emergenze, interventi chirurgici, terapie oncologiche e malattie croniche.",
-      emoji: "🩸",
-    },
-    {
       title: "Chi può donare?",
       content:
         "Puoi donare se hai tra 18 e 60 anni, pesi più di 50 kg e hai uno stile di vita sano.",
@@ -215,6 +209,11 @@ export default function App() {
                   section.title
                 )}
               </h3>
+              {section.title === "Come ottenere l'idoneità" ? (
+                <p className="mt-2 text-sm md:text-base font-bold uppercase tracking-wide text-[#005bbb]/80">
+                  Ecco i requisiti base!
+                </p>
+              ) : null}
             </div>
 
             {section.title !== "Chi può donare?" &&
@@ -261,7 +260,7 @@ export default function App() {
 
       <section className="bg-white text-[#005bbb] py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">
+          <h2 className="text-2xl md:text-4xl font-black uppercase leading-tight">
             Una donazione può salvare
             <br />
             fino a 3 vite
@@ -269,11 +268,6 @@ export default function App() {
           
           <p className="mt-6 text-lg md:text-xl text-[#005bbb]/80 font-semibold">
             Il sangue è fondamentale per:
-          </p>
-          
-          <p className="mt-6 text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto text-[#005bbb]/85">
-            Il sangue è fondamentale per interventi chirurgici, emergenze,
-            terapie oncologiche e malattie croniche.
           </p>
 
           <div className="grid md:grid-cols-4 gap-6 mt-20">
@@ -319,7 +313,7 @@ export default function App() {
             <p className="uppercase tracking-[0.3em] font-bold text-[#005bbb]/70 mb-4">
               Preparati al meglio
             </p>
-            <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black uppercase leading-tight">
               Cosa mangiare prima della donazione
             </h2>
             <p className="mt-6 text-xl text-[#005bbb]/80 max-w-3xl mx-auto leading-relaxed">
