@@ -186,8 +186,8 @@ export default function App() {
             key={section.title}
             className="group bg-white text-[#005bbb] rounded-[2rem] p-7 md:p-10 shadow-xl hover:-translate-y-2 transition-all duration-300 text-center"
           >
-            <div className="flex items-center justify-center gap-3 mb-5">
-              <span className="text-xl leading-none group-hover:scale-110 transition-transform duration-300 inline-block">
+            <div className="flex items-start justify-center gap-3 mb-5">
+              <span className="text-xl leading-none mt-1 group-hover:scale-110 transition-transform duration-300 inline-block">
                 {section.emoji}
               </span>
               <h3 className="text-3xl md:text-4xl font-black uppercase leading-tight text-left">
@@ -206,13 +206,13 @@ export default function App() {
             </div>
 
             {section.title !== "Chi può donare?" ? (
-              <p className="text-lg leading-relaxed text-[#005bbb]/90">
+              <p className="text-lg leading-relaxed text-[#005bbb]/90 text-justify">
                 {section.content}
               </p>
             ) : null}
 
             {section.items ? (
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
                 {section.items.map((item) => (
                   <span
                     key={item}
@@ -250,7 +250,7 @@ export default function App() {
 
       <section id="donazione" className="py-28 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-20">
-          <p className="text-white/80 uppercase tracking-[0.3em] font-bold mb-4">
+          <p className="text-white/80 uppercase tracking-[0.12em] md:tracking-[0.3em] font-bold mb-4 whitespace-nowrap text-sm md:text-base">
             Tempi, quantità e frequenza
           </p>
           <h2 className="text-5xl md:text-6xl font-black uppercase leading-tight">
@@ -307,7 +307,7 @@ export default function App() {
       <section id="mappa" className="py-28 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <h2 className="text-5xl md:text-6xl font-black uppercase leading-tight mb-8">
+            <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight mb-8">
               Trova la tua AVIS provinciale
             </h2>
             <p className="text-xl leading-relaxed text-white/90 max-w-3xl mx-auto">
@@ -405,7 +405,7 @@ export default function App() {
         className="relative py-36 px-6 text-center overflow-hidden"
       >
         <div className="relative max-w-5xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-black uppercase leading-tight">
+          <h2 className="text-4xl md:text-6xl font-black uppercase leading-tight">
             Dona il tuo tempo.
             <br />
             <span className="whitespace-nowrap">Diventa volontario AVIS.</span>
