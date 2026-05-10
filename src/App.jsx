@@ -448,10 +448,9 @@ export default function App() {
           </p>
 
           <a
-            <a
-              href="https://www.avis.it/"
-              target="_blank"
-              rel="noopener noreferrer"
+            href="https://www.avis.it/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block mt-14 bg-white text-[#005bbb] hover:scale-110 transition-all duration-300 px-12 py-6 rounded-full text-xl font-black shadow-xl"
           >
             Unisciti ad AVIS
