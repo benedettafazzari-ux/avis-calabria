@@ -191,13 +191,13 @@ export default function App() {
         {sections.map((section) => (
           <article
             key={section.title}
-            className="group bg-white text-[#005bbb] rounded-[2rem] p-7 md:p-10 shadow-xl hover:-translate-y-2 transition-all duration-300 text-left"
+            className="group bg-white text-[#005bbb] rounded-[1.5rem] p-5 md:p-8 shadow-xl hover:-translate-y-2 transition-all duration-300 text-left"
           >
-            <div className="flex items-start justify-start gap-3 mb-5">
+            <div className="flex items-start justify-start gap-3 mb-4">
               <span className="text-xl leading-none mt-1 group-hover:scale-110 transition-transform duration-300 inline-block">
                 {section.emoji}
               </span>
-              <h3 className="text-3xl md:text-4xl font-black uppercase leading-tight text-left">
+             <h3 className="text-2xl md:text-3xl font-black uppercase leading-tight text-left">
                 {section.title === "Perché donare il sangue?" ? (
                   <>
                     Perché donare
@@ -211,10 +211,10 @@ export default function App() {
                 )}
               </h3>
               {section.title === "Chi può donare?" ? (
-                  <p className="mt-3 text-base font-bold uppercase tracking-wide text-[#005bbb]/80">
-                    Ecco i requisiti base!
-                  </p>
-                ) : null}
+                <p className="mt-2 text-sm md:text-base font-bold uppercase tracking-wide text-[#005bbb]/80">
+                  Ecco i requisiti base!
+                </p>
+              ) : null}
             </div>
 
             {section.title !== "Chi può donare?" ? (
@@ -224,7 +224,7 @@ export default function App() {
             ) : null}
 
             {section.items ? (
-              <div className="mt-8 flex flex-wrap justify-start gap-3">
+              <div className="mt-6 flex flex-wrap justify-start gap-3">
                 {section.items.map((item) => (
                   <span
                     key={item}
