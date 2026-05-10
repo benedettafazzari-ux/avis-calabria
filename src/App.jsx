@@ -158,8 +158,7 @@ export default function App() {
         </div>
       </nav>
 
-      <section className="relative min-h-[72vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-20 pb-14">
-        <div className="relative z-10 w-full max-w-7xl mx-auto">
+<section className="relative min-h-[72vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-10 pb-10">        <div className="relative z-10 w-full max-w-7xl mx-auto">
           <h1 className="text-[clamp(2.25rem,7.5vw,7rem)] font-black uppercase leading-none whitespace-nowrap tracking-tight">
             Il sangue <span className="text-red-500">salva vite.</span>
           </h1>
