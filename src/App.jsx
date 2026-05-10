@@ -143,9 +143,11 @@ export default function App() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-[#005bbb] border-b border-white/15">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-center">
           <div className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide">
-            <a href="https://www.aviscalabria.it/" target="_blank"
-                rel="noopener noreferrer" className="hover:text-white/70 transition">
-              AVIS
+            <a
+              href="https://www.aviscalabria.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute left-1/2 bottom-16 z-20 -translate-x-1/2 translate-y-1/2 inline-flex items-center justify-center bg-white text-[#005bbb] border-4 border-[#005bbb] hover:scale-105 transition-all duration-300 px-10 py-5 rounded-full text-xl font-black shadow-xl">
             </a>
             <a href="#donazione" className="hover:text-white/70 transition">
               Donazione
@@ -165,11 +167,11 @@ export default function App() {
 
 <section className="relative min-h-[62vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-4 pb-10">
       <div className="relative z-10 w-full max-w-7xl mx-auto">
-          <h1 className="text-[clamp(2.25rem,7.5vw,7rem)] font-black uppercase leading-none whitespace-nowrap tracking-tight">
+          <h1 className="text-[clamp(2rem,6.5vw,6rem)] font-black uppercase leading-none whitespace-nowrap tracking-tight">
             Il sangue <span className="text-red-500">salva vite.</span>
           </h1>
 
-          <h2 className="mt-8 text-3xl md:text-5xl font-bold uppercase leading-tight text-white/95">
+          <h2 className="mt-6 text-2xl md:text-4xl font-bold uppercase leading-tight text-white/95">
             La tua scelta può fare la differenza.
           </h2>
         </div>
@@ -209,12 +211,12 @@ export default function App() {
                   section.title
                 )}
               </h3>
-              {section.title === "Come ottenere l'idoneità" ? (
+            </div>
+            {section.title === "Come ottenere l'idoneità" ? (
                 <p className="mt-2 text-sm md:text-base font-bold uppercase tracking-wide text-[#005bbb]/80">
                   Ecco i requisiti base!
                 </p>
               ) : null}
-            </div>
 
             {section.title !== "Chi può donare?" &&
             section.title !== "Come ottenere l'idoneità" ? (
@@ -260,13 +262,13 @@ export default function App() {
 
       <section className="bg-white text-[#005bbb] py-28 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-black uppercase leading-tight">
+         <h2 className="text-2xl md:text-4xl font-black uppercase leading-tight">
             Una donazione può salvare
             <br />
-            fino a 3 vite
+            <span className="text-4xl md:text-6xl">fino a 3 vite</span>
           </h2>
           
-          <p className="mt-6 text-lg md:text-xl text-[#005bbb]/80 font-semibold">
+          <p className="mt-6 text-2xl md:text-3xl text-[#005bbb]/80 font-black">
             Il sangue è fondamentale per:
           </p>
 
@@ -286,7 +288,7 @@ export default function App() {
       <section id="donazione" className="py-28 px-6 max-w-6xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-black uppercase leading-tight">
-            La donazione
+            La donazione di sangue
           </h2>
           
           <p className="mt-4 text-white/80 uppercase tracking-[0.12em] md:tracking-[0.3em] font-bold whitespace-nowrap text-sm md:text-base">
