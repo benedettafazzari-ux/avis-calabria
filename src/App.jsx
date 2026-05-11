@@ -1,3 +1,4 @@
+import logoGiovani from " ./assets/logo-giovani-png";
 export default function App() {
   const BLUE = "#005bbb";
 
@@ -142,12 +143,13 @@ export default function App() {
       </nav>
 
       <section className="relative bg-[#005bbb] px-6 pt-10 pb-0 text-center">
-        <div className="mb-16 flex items-center justify-center gap-3">
-          <div className="text-5xl font-black leading-none tracking-tight">
-            <span className="text-white">AV</span>
-            <span className="text-red-500">I</span>
-            <span className="text-white">S</span>
-          </div>
+        <div className="absolute top-6 left-1/2 -translate-x-1/2">
+          <img
+            src={logoGiovani}
+            alt="Giovani AVIS Calabria"
+            className="w-[230px] md:w-[320px] object-contain"
+          />
+        </div>
 
           <div className="text-left leading-none">
             <p className="text-lg font-black text-white">Regionale</p>
