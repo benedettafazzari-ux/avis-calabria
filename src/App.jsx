@@ -121,20 +121,20 @@ export default function App() {
               href="https://www.aviscalabria.it/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white/70 transition"
+              className="transition hover:text-white/70"
             >
               AVIS
             </a>
-            <a href="#donazione" className="hover:text-white/70 transition">
+            <a href="#donazione" className="transition hover:text-white/70">
               Donazione
             </a>
-            <a href="#mangiare" className="hover:text-white/70 transition">
+            <a href="#mangiare" className="transition hover:text-white/70">
               Cosa mangiare
             </a>
-            <a href="#mappa" className="hover:text-white/70 transition">
+            <a href="#mappa" className="transition hover:text-white/70">
               Sedi
             </a>
-            <a href="#faq" className="hover:text-white/70 transition">
+            <a href="#faq" className="transition hover:text-white/70">
               FAQ
             </a>
           </div>
@@ -168,7 +168,7 @@ export default function App() {
 
       <section
         id="avis"
-        className="bg-[#005bbb] px-6 pb-12 space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 md:px-10"
+        className="space-y-8 bg-[#005bbb] px-6 pb-12 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 md:px-10"
       >
         {sections.map((section) => (
           <article
@@ -177,7 +177,6 @@ export default function App() {
           >
             <div className="mb-7 flex items-center gap-4">
               <span className="text-3xl">{section.emoji}</span>
-
               <h3 className="text-2xl font-black uppercase leading-tight">
                 {section.title}
               </h3>
