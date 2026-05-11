@@ -1,3 +1,5 @@
+import logoGiovani from "./assets/logo-giovani.png";
+
 export default function App() {
   const BLUE = "#005bbb";
 
@@ -144,7 +146,7 @@ export default function App() {
       <section className="relative overflow-hidden bg-[#005bbb] px-6 pt-10 pb-44 text-white">
         <div className="mx-auto flex max-w-md flex-col items-center text-center">
           <img
-            src="/src/assets/logo-giovani.png"
+            src={logoGiovani}
             alt="Giovani AVIS Calabria"
             className="mb-8 w-[260px] object-contain"
           />
@@ -160,13 +162,13 @@ export default function App() {
           </p>
         </div>
 
-        <div className="absolute bottom-0 left-1/2 h-44 w-[88%] -translate-x-1/2 rounded-t-[4rem] bg-white" />
+       <div className="absolute bottom-0 left-1/2 h-40 w-[88%] -translate-x-1/2 rounded-t-[4rem] bg-white" />
 
         <a
           href="https://www.aviscalabria.it/"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute left-1/2 bottom-8 z-20 flex h-[82px] w-[240px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border-[5px] border-[#005bbb] bg-white text-center text-[1.65rem] font-black leading-tight text-[#005bbb] shadow-2xl"
+          className="absolute left-1/2 bottom-16 z-20 flex h-[76px] w-[250px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border-[5px] border-[#005bbb] bg-white text-center text-[1.45rem] font-black leading-tight text-[#005bbb] shadow-2xl"
         >
           Diventa Donatore
         </a>
