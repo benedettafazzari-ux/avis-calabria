@@ -1,4 +1,3 @@
-import logoGiovani from " ./assets/logo-giovani-png";
 export default function App() {
   const BLUE = "#005bbb";
 
@@ -142,41 +141,35 @@ export default function App() {
         </div>
       </nav>
 
-      <section className="relative bg-[#005bbb] px-6 pt-10 pb-0 text-center">
-        <div className="absolute top-6 left-1/2 -translate-x-1/2">
+      <section className="relative overflow-hidden bg-[#005bbb] px-6 pt-10 pb-44 text-white">
+        <div className="mx-auto flex max-w-md flex-col items-center text-center">
           <img
-            src={logoGiovani}
+            src="/src/assets/logo-giovani.png"
             alt="Giovani AVIS Calabria"
-            className="w-[230px] md:w-[320px] object-contain"
+            className="mb-8 w-[260px] object-contain"
           />
+
+          <h1 className="whitespace-nowrap text-[clamp(1.8rem,7vw,5rem)] font-black uppercase leading-none tracking-tight">
+            IL SANGUE <span className="text-[#ff4d5a]">SALVA VITE.</span>
+          </h1>
+
+          <p className="mt-8 text-[clamp(1.2rem,5vw,2.4rem)] font-black uppercase leading-tight">
+            LA TUA SCELTA PUÒ FARE
+            <br />
+            LA DIFFERENZA.
+          </p>
         </div>
 
-          <div className="text-left leading-none">
-            <p className="text-lg font-black text-white">Regionale</p>
-            <p className="text-lg font-black text-white">Calabria</p>
-          </div>
-        </div>
+        <div className="absolute bottom-0 left-1/2 h-44 w-[88%] -translate-x-1/2 rounded-t-[4rem] bg-white" />
 
-        <h1 className="whitespace-nowrap text-[clamp(1.8rem,7vw,5rem)] font-black uppercase leading-none tracking-tight">
-          Il sangue <span className="text-red-500">salva vite.</span>
-        </h1>
-
-        <h2 className="mx-auto mt-10 max-w-[360px] text-[clamp(1.6rem,6vw,3.5rem)] font-black uppercase leading-tight">
-          La tua scelta può fare
-          <br />
-          la differenza.
-        </h2>
-
-        <div className="relative mt-20 h-[170px] rounded-t-[3.5rem] bg-white">
-          <a
-            href="https://www.aviscalabria.it/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute left-1/2 bottom-6 z-20 -translate-x-1/2 translate-y-1/2 inline-flex w-[250px] items-center justify-center bg-white text-[#005bbb] border-[5px] border-[#005bbb] px-8 py-4 rounded-full text-xl font-black shadow-2xl"
-          >
-            Diventa Donatore
-          </a>
-        </div>
+        <a
+          href="https://www.aviscalabria.it/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute left-1/2 bottom-8 z-20 flex h-[82px] w-[240px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border-[5px] border-[#005bbb] bg-white text-center text-[1.65rem] font-black leading-tight text-[#005bbb] shadow-2xl"
+        >
+          Diventa Donatore
+        </a>
       </section>
 
       <section
@@ -223,7 +216,7 @@ export default function App() {
                 {section.items.map((item) => (
                   <span
                     key={item}
-                    className="flex min-h-[64px] items-center justify-center whitespace-pre-line rounded-full bg-[#005bbb] px-3 py-3 text-center text-[0.88rem] font-black leading-snug text-white shadow-lg"
+                    className="flex min-h-[58px] items-center justify-center whitespace-pre-line rounded-full bg-[#005bbb] px-3 py-2 text-center text-[0.85rem] font-black leading-tight text-white shadow-lg"
                   >
                     {item}
                   </span>
@@ -363,7 +356,9 @@ export default function App() {
                     aria-label={`Apri AVIS Provinciale ${province.name}`}
                     title={`AVIS Provinciale ${province.name}`}
                   >
-                    <span className="text-xl leading-none">{province.sigla}</span>
+                    <span className="text-xl leading-none">
+                      {province.sigla}
+                    </span>
                     <span className="mt-1 text-[10px] font-bold uppercase">
                       Vai
                     </span>
