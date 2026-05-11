@@ -170,7 +170,7 @@ export default function App() {
             href="https://www.aviscalabria.it/"
             target="_blank"
             rel="noopener noreferrer"
-            className="absolute left-1/2 top-0 flex h-[82px] w-[245px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[5px] border-[#005bbb] bg-white text-center text-xl font-black leading-tight text-[#005bbb] shadow-2xl"
+            className="absolute left-1/2 bottom-6 z-20 -translate-x-1/2 translate-y-1/2 inline-flex w-[250px] items-center justify-center bg-white text-[#005bbb] border-[5px] border-[#005bbb] px-8 py-4 rounded-full text-xl font-black shadow-2xl"
           >
             Diventa Donatore
           </a>
