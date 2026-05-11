@@ -1,5 +1,3 @@
-import logoGiovani from "./assets/logo-giovani.png";
-
 export default function App() {
   const BLUE = "#005bbb";
 
