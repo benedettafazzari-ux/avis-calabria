@@ -141,33 +141,34 @@ export default function App() {
         </div>
       </nav>
 
-      <section className="relative overflow-hidden bg-[#005bbb] px-6 pt-10 pb-44 text-white">
-        <div className="mx-auto flex max-w-md flex-col items-center text-center">
-         <div className="mb-8 flex items-center justify-center gap-3">
-
-          <h1 className="whitespace-nowrap text-[clamp(1.8rem,7vw,5rem)] font-black uppercase leading-none tracking-tight">
-            IL SANGUE <span className="text-[#e30613]">SALVA VITE.</span>
+      <section className="bg-[#005bbb] px-6 pt-20 pb-24 text-center text-white">
+        <div className="mx-auto flex max-w-md flex-col items-center">
+          <h1 className="text-[clamp(2.3rem,11vw,5rem)] font-black uppercase leading-none tracking-tight">
+            IL SANGUE
+            <br />
+            <span className="text-[#e30613]">SALVA VITE.</span>
           </h1>
 
-          <p className="mt-8 text-[clamp(1.2rem,5vw,2.4rem)] font-black uppercase leading-tight">
+          <p className="mt-10 text-[clamp(1.45rem,6vw,2.4rem)] font-black uppercase leading-tight">
             LA TUA SCELTA PUÒ FARE
             <br />
             LA DIFFERENZA.
           </p>
-           <a
-              href="https://www.aviscalabria.it/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex min-h-[64px] items-center justify-center whitespace-pre-line rounded-2xl bg-[#005bbb] px-3 py-2 text-center text-[0.9rem] font-black leading-tight text-white shadow-lg"
-              >
-              Diventa Donatore
-            </a>
+
+          <a
+            href="https://www.aviscalabria.it/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto mt-14 flex h-[76px] w-[260px] items-center justify-center rounded-full bg-white text-center text-[1.35rem] font-black leading-tight text-[#005bbb] shadow-2xl"
+          >
+            Diventa Donatore
+          </a>
         </div>
       </section>
 
       <section
         id="avis"
-        className="bg-[#005bbb] px-6 pt-10 pb-12 space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 md:px-10"
+        className="bg-[#005bbb] px-6 pb-12 space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 md:px-10"
       >
         {sections.map((section) => (
           <article
@@ -209,7 +210,7 @@ export default function App() {
                 {section.items.map((item) => (
                   <span
                     key={item}
-                    className="flex min-h-[64px] items-center justify-center whitespace-pre-line rounded-2xl bg-[#005bbb] px-3 py-2 text-center text-[0.9rem] font-black leading-tight text-white shadow-lg"
+                    className="flex min-h-[64px] items-center justify-center rounded-2xl bg-[#005bbb] px-3 py-2 text-center text-[0.85rem] font-black leading-tight text-white shadow-lg"
                   >
                     {item}
                   </span>
