@@ -6,7 +6,7 @@ export default function App() {
       title: "Cos'è AVIS?",
       content:
         "AVIS è la più grande organizzazione italiana di volontariato del sangue e contribuisce a garantire circa il 70% del fabbisogno nazionale.",
-      items: ["♡ Solidarietà", "☆ Gratuità", "○ Anonimato", "▦ Periodicità"],
+      items: ["🤝 Solidarietà", "❤️ Gratuità", "🛡️ Anonimato", "🔁 Periodicità"],
       emoji: "🩸",
     },
     {
@@ -144,17 +144,6 @@ export default function App() {
       <section className="relative overflow-hidden bg-[#005bbb] px-6 pt-10 pb-44 text-white">
         <div className="mx-auto flex max-w-md flex-col items-center text-center">
          <div className="mb-8 flex items-center justify-center gap-3">
-          <div className="text-5xl font-black leading-none tracking-tight">
-            <span className="text-white">AV</span>
-            <span className="text-[#e30613]">I</span>
-            <span className="text-white">S</span>
-          </div>
-        
-          <div className="text-left leading-none">
-            <p className="text-xl font-black text-white">Giovani</p>
-            <p className="text-xl font-black text-white">Calabria</p>
-          </div>
-        </div>
 
           <h1 className="whitespace-nowrap text-[clamp(1.8rem,7vw,5rem)] font-black uppercase leading-none tracking-tight">
             IL SANGUE <span className="text-[#e30613]">SALVA VITE.</span>
@@ -165,16 +154,15 @@ export default function App() {
             <br />
             LA DIFFERENZA.
           </p>
+           <a
+              href="https://www.aviscalabria.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-[64px] items-center justify-center whitespace-pre-line rounded-2xl bg-[#005bbb] px-3 py-2 text-center text-[0.9rem] font-black leading-tight text-white shadow-lg"
+              >
+              Diventa Donatore
+            </a>
         </div>
-
-        <a
-          href="https://www.aviscalabria.it/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-10 flex h-[76px] w-[250px] items-center justify-center rounded-full border-[5px] border-white bg-white text-center text-[1.45rem] font-black leading-tight text-[#005bbb] shadow-2xl"
-        >
-          Diventa Donatore
-        </a>
       </section>
 
       <section
@@ -221,7 +209,7 @@ export default function App() {
                 {section.items.map((item) => (
                   <span
                     key={item}
-                    className="flex min-h-[58px] items-center justify-center whitespace-pre-line rounded-full bg-[#005bbb] px-3 py-2 text-center text-[0.85rem] font-black leading-tight text-white shadow-lg"
+                    className="flex min-h-[64px] items-center justify-center whitespace-pre-line rounded-2xl bg-[#005bbb] px-3 py-2 text-center text-[0.9rem] font-black leading-tight text-white shadow-lg"
                   >
                     {item}
                   </span>
