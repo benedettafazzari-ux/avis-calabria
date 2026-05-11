@@ -12,10 +12,10 @@ export default function App() {
     {
       title: "Chi può donare?",
       items: [
-        "Età compresa tra\n18 e 60 anni",
-        "Peso superiore\na 50 kg",
-        "Buono stato di salute",
-        "Stile di vita sano",
+        "🧑 18–60 anni",
+        "⚖️ Oltre 50 kg",
+        "❤️ Buona salute",
+        "🌿 Vita sana",
       ],
       emoji: "✅",
     },
@@ -141,12 +141,10 @@ export default function App() {
         </div>
       </nav>
 
-      <section className="bg-[#005bbb] px-6 pt-20 pb-24 text-center text-white">
+       <section className="bg-[#005bbb] px-6 pt-16 pb-10 text-center text-white">
         <div className="mx-auto flex max-w-md flex-col items-center">
-          <h1 className="text-[clamp(2.3rem,11vw,5rem)] font-black uppercase leading-none tracking-tight">
-            IL SANGUE
-            <br />
-            <span className="text-[#e30613]">SALVA VITE.</span>
+          <h1 className="whitespace-nowrap text-[clamp(1.8rem,8vw,5rem)] font-black uppercase leading-none tracking-tight">
+            IL SANGUE <span className="text-[#e30613]">SALVA VITE.</span>
           </h1>
 
           <p className="mt-10 text-[clamp(1.45rem,6vw,2.4rem)] font-black uppercase leading-tight">
@@ -159,7 +157,7 @@ export default function App() {
             href="https://www.aviscalabria.it/"
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-auto mt-14 flex h-[76px] w-[260px] items-center justify-center rounded-full bg-white text-center text-[1.35rem] font-black leading-tight text-[#005bbb] shadow-2xl"
+            className="mx-auto mt-10 flex h-[76px] w-[260px] items-center justify-center rounded-full bg-white text-center text-[1.35rem] font-black leading-tight text-[#005bbb] shadow-2xl"
           >
             Diventa Donatore
           </a>
