@@ -143,14 +143,21 @@ export default function App() {
 
       <section className="relative overflow-hidden bg-[#005bbb] px-6 pt-10 pb-44 text-white">
         <div className="mx-auto flex max-w-md flex-col items-center text-center">
-          <img
-            src={logoGiovani}
-            alt="Giovani AVIS Calabria"
-            className="mb-8 w-[260px] object-contain"
-          />
+         <div className="mb-8 flex items-center justify-center gap-3">
+          <div className="text-5xl font-black leading-none tracking-tight">
+            <span className="text-white">AV</span>
+            <span className="text-[#e30613]">I</span>
+            <span className="text-white">S</span>
+          </div>
+        
+          <div className="text-left leading-none">
+            <p className="text-xl font-black text-white">Giovani</p>
+            <p className="text-xl font-black text-white">Calabria</p>
+          </div>
+        </div>
 
           <h1 className="whitespace-nowrap text-[clamp(1.8rem,7vw,5rem)] font-black uppercase leading-none tracking-tight">
-            IL SANGUE <span className="text-[#ff4d5a]">SALVA VITE.</span>
+            IL SANGUE <span className="text-[#e30613]">SALVA VITE.</span>
           </h1>
 
           <p className="mt-8 text-[clamp(1.2rem,5vw,2.4rem)] font-black uppercase leading-tight">
