@@ -6,7 +6,7 @@ export default function App() {
       title: "Cos'è AVIS?",
       content:
         "AVIS è la più grande organizzazione italiana di volontariato del sangue e contribuisce a garantire circa il 70% del fabbisogno nazionale.",
-      items: ["Solidarietà", "Gratuità", "Anonimato", "Periodicità"],
+      items: ["♡ Solidarietà", "☆ Gratuità", "○ Anonimato", "▦ Periodicità"],
       emoji: "🩸",
     },
     {
@@ -167,13 +167,11 @@ export default function App() {
           </p>
         </div>
 
-       <div className="absolute bottom-0 left-1/2 h-40 w-[88%] -translate-x-1/2 rounded-t-[4rem] bg-white" />
-
         <a
           href="https://www.aviscalabria.it/"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute left-1/2 bottom-16 z-20 flex h-[76px] w-[250px] -translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border-[5px] border-[#005bbb] bg-white text-center text-[1.45rem] font-black leading-tight text-[#005bbb] shadow-2xl"
+          className="mt-10 flex h-[76px] w-[250px] items-center justify-center rounded-full border-[5px] border-white bg-white text-center text-[1.45rem] font-black leading-tight text-[#005bbb] shadow-2xl"
         >
           Diventa Donatore
         </a>
